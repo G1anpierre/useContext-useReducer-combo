@@ -19,7 +19,6 @@ const formReducer = (state, action) => {
       };
 
     case "resetForm":
-      console.log("REDUCER RESET");
       return {
         ...state,
         username: "",
@@ -49,7 +48,7 @@ export const useFormContext = () => {
   return formContext;
 };
 
-// importable helpers
+// importable helpers like facebook does
 
 const updateUser = (formGlobalState, formLocalState) => {
   return { ...formGlobalState, ...formLocalState };
